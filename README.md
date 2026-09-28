@@ -28,9 +28,11 @@ A personal portfolio website showcasing my skills, projects, and resume.
 ├── index.html
 ├── style.css
 ├── script.js
-├── jai.jpg / Alexei.jpg      # profile images
-├── Screenshot *.png          # project screenshots
-└── JaiPrakashThakurResume.pdf
+└── assets/
+	├── Alexei.jpg
+	├── developer-workspace.jpg
+	├── Screenshot *.png
+	└── Jai_Prakash_Thakur_Resume (1).pdf
 ```
 
 ## Author
