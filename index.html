@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Prakash Thakur | Portfolio</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+        <a href="#" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="#home" class="active" style="--i:1;">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#skills" style="--i:3;">Skills</a>
+            <a href="#portfolio" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Jai Prakash Thakur</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>I am a passionate Web Developer currently pursuing my MCA at LNCT Bhopal. 
+            I focus on mastering advanced web technologies and the MERN Stack principles.</p>
+            
+            <div class="social-media">
+                <a href="https://github.com/jai-prakash-811" style="--i:7;" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://x.com/jai_prakash__8" style="--i:8;" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/jai__prakash_08/" style="--i:9;" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/jai-prakash-thakur-4263ba355/" style="--i:10;" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            </div>
+
+            <a href="Jai_Prakash_Thakur_Resume (1).pdf" download class="btn">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <img src="Alexei.jpg" alt="Profile Picture">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+                <!-- <img src="developer-workspace.jpg" alt="Developer workspace with code on a monitor" loading="lazy"> -->
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Passionate Front-End Web Developer</h3>
+            <p>
+                Hello! I'm Jai Prakash, a passionate Front-End Web Developer currently pursuing my <b>Master of Computer Applications (MCA)</b> at <b>LNCT Bhopal</b>.
+                <br><br>
+                I have a solid foundation in building responsive and interactive websites using <b>HTML, CSS, and JavaScript</b>. During my internship focused on web design and UI development, I gained practical experience creating user-friendly interfaces and improving the overall web experience.
+                <br><br>
+                Along with web development, I have programming experience in <b>C and Python</b>, and I am familiar with <b>data visualization</b> and <b>Microsoft Office tools</b>. I enjoy learning new technologies and continuously expanding my skills in Full Stack Development.
+            </p>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Frontend Development</h3>
+                <div class="skill-bar">
+                    <div class="info"><span>HTML</span><span>80%</span></div>
+                    <div class="bar"><span style="width: 80%"></span></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info"><span>CSS</span><span>65%</span></div>
+                    <div class="bar"><span style="width: 65%"></span></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info"><span>JavaScript</span><span>40%</span></div>
+                    <div class="bar"><span style="width: 40%"></span></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info"><span>React</span><span>50%</span></div>
+                    <div class="bar"><span style="width: 50%"></span></div>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <h3>Backend & Languages</h3>
+                <div class="skill-bar">
+                    <div class="info"><span>Python</span><span>60%</span></div>
+                    <div class="bar"><span style="width: 60%"></span></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info"><span>Java</span><span>50%</span></div>
+                    <div class="bar"><span style="width: 50%"></span></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info"><span>Node.js</span><span>45%</span></div>
+                    <div class="bar"><span style="width: 45%"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-filters" role="group" aria-label="Filter projects">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="ai">AI & Data</button>
+            <button class="filter-btn" type="button" data-filter="web">Web Apps</button>
+            <button class="filter-btn" type="button" data-filter="gaming">Gaming</button>
+        </div>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box" data-category="ai">
+                <div class="portfolio-img">
+                    <img src="Screenshot 2026-09-24 200938.png" alt="AI College Query Chatbot screenshot" loading="lazy">
+                </div>
+                <div class="portfolio-layer">
+                    <i class='bx bx-message-square-dots'></i>
+                    <h4>AI College Query Chatbot</h4>
+                    <p>An AI-powered chatbot that answers common college-related queries (admissions, courses, fees, schedules) instantly using natural language processing.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>NLTK</span>
+                        <span>spaCy</span>
+                        <span>Flask</span>
+                    </div>
+                    <a href="#" class="project-details" data-project="chatbot" aria-label="View AI College Query Chatbot details"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="web">
+                <div class="portfolio-img">
+                        <img src="Screenshot 2025-07-25 130733.png" alt="Fashion E-Commerce screenshot" loading="lazy">
+                </div>
+                <div class="portfolio-layer">
+                    <i class='bx bxs-t-shirt'></i>
+                    <h4>Fashion E-Commerce</h4>
+                    <p>A visually appealing and responsive fashion store allowing users to browse clothing and accessories seamlessly.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-details" data-project="fashion" aria-label="View Fashion E-Commerce details"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="gaming">
+                <div class="portfolio-img">
+                        <img src="Screenshot 2025-12-16 110630.png" alt="Esports Zone screenshot" loading="lazy">
+                </div>
+                <div class="portfolio-layer">
+                    <i class='bx bx-joystick'></i>
+                    <h4>Esports zone</h4>
+                    <p>A high-performance gaming news portal with live tournament tracking and player stats. </p>
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                        <span>DOM</span>
+                    </div>
+                    <a href="#" class="project-details" data-project="esports" aria-label="View Esports Zone details"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Close project details"><i class='bx bx-x'></i></button>
+            <i class='bx bx-code-alt modal-icon' id="modal-icon"></i>
+            <p class="modal-kicker">Project spotlight</p>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <div class="modal-tags" id="modal-tags"></div>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Get In <span>Touch</span></h2>
+
+        <form action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Jai Prakash Thakur | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
