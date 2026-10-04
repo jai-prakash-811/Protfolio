@@ -23,13 +23,66 @@
         }
 
         body {
+            position: relative;
             background: var(--bg-color);
             color: var(--text-color);
+            overflow-x: hidden;
         }
 
         html {
             font-size: 62.5%;
             overflow-x: hidden;
+        }
+
+        .ambient-bg {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.35;
+            animation: floatOrb 12s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 28rem;
+            height: 28rem;
+            background: rgba(88, 166, 255, 0.22);
+            top: 12%;
+            left: 10%;
+        }
+
+        .orb-2 {
+            width: 32rem;
+            height: 32rem;
+            background: rgba(143, 92, 255, 0.15);
+            right: 8%;
+            top: 18%;
+            animation-delay: 2s;
+        }
+
+        .orb-3 {
+            width: 26rem;
+            height: 26rem;
+            background: rgba(76, 204, 255, 0.15);
+            left: 48%;
+            bottom: 10%;
+            animation-delay: 4s;
+        }
+
+        header,
+        section,
+        footer,
+        .social-rail,
+        .project-modal {
+            position: relative;
+            z-index: 1;
         }
 
         section {
@@ -180,7 +233,7 @@
         .social-rail a:hover,
         .social-rail a:focus-visible {
             color: var(--main-color);
-            transform: translateX(.4rem);
+            transform: translateX(.7rem);
         }
 
         .social-rail a:nth-child(odd) {
@@ -193,7 +246,9 @@
 
         /* Buttons */
         .btn {
+            position: relative;
             display: inline-block;
+            overflow: hidden;
             padding: 1rem 2.8rem;
             background: var(--main-color);
             border-radius: 4rem;
@@ -208,13 +263,33 @@
             animation-delay: 2s;
         }
 
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.45) 50%, transparent 100%);
+            transform: translateX(-130%);
+            transition: transform .8s ease;
+        }
+
+        .btn:hover::before {
+            transform: translateX(130%);
+        }
+
         .btn:hover {
             box-shadow: 0 0 1.8rem rgba(88, 166, 255, .55);
             background: #79b8ff;
             color: #0d1117;
         }
 
+        .home-img {
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+
         .home-img img {
+            position: relative;
             width: 25vw;
             border-radius: 50%;
             box-shadow: 0 0 2.5rem rgba(88, 166, 255, .4);
@@ -227,6 +302,7 @@
 
         .home-img img:hover {
             box-shadow: 0 0 4rem rgba(88, 166, 255, .55);
+            transform: translateY(-4px) scale(1.02);
         }
 
         /* --- ABOUT SECTION --- */
@@ -726,6 +802,11 @@
         @keyframes zoomIn {
             0% { transform: scale(0); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate3d(0, 0, 0) scale(1); }
+            100% { transform: translate3d(2rem, -3rem, 0) scale(1.15); }
         }
 
         @media (prefers-reduced-motion: reduce) {

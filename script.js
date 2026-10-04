@@ -22,6 +22,19 @@
         const progressBar = document.querySelector('#scroll-progress-bar');
         const header = document.querySelector('header');
 
+        document.addEventListener('pointermove', (event) => {
+            const x = (event.clientX / window.innerWidth - 0.5) * 24;
+            const y = (event.clientY / window.innerHeight - 0.5) * 24;
+
+            document.documentElement.style.setProperty('--pointer-x', `${x}px`);
+            document.documentElement.style.setProperty('--pointer-y', `${y}px`);
+
+            const homeImg = document.querySelector('.home-img');
+            if (homeImg) {
+                homeImg.style.transform = `translate(${x * 0.35}px, ${y * 0.35}px)`;
+            }
+        });
+
         window.onscroll = () => {
             const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
